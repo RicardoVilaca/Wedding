@@ -31,6 +31,8 @@
       <link rel="apple-touch-icon" sizes="72x72" href="{% static 'icons/apple-icon-72x72.png' %}">
       <link rel="apple-touch-icon" sizes="114x114" href="{% static 'icons/apple-icon-114x114.png' %}">
       <link rel="shortcut icon" href="{% static 'icons/favicon.ico' %}" type="image/x-icon">
+      <!-- Custom -->
+      <link rel="stylesheet" href="{% static 'css/custom.css' %}">
    </head>
    <body id="page-top" data-spy="scroll" data-target=".navbar-custom">    
       <!-- Preloader -->
@@ -85,13 +87,6 @@
       <!-- /navbar ends --> 
       <!-- section: intro--> 
       <section id="intro" class="container-fluid">
-         <!-- parallax ornament -->
-         <div class="ornament1 hidden-sm hidden-xs hidden-md"
-            data-100="transform:translatey(150%);"
-            data-center-center="transform:translatey(-10%);">
-            <!-- illustration path in the color template CSS -->
-         </div>
-         <!--/ornament 1-->
          <!-- Background blurred images -->
          <div class="photowall">
             <div class="col-md-4 margin1">
@@ -141,15 +136,12 @@
                <!-- well starts-->
                <div class="well col-md-10 col-md-offset-1 text-center">
                   <div class="section-heading">
-                     <h2>September 28, 2024</h2>
+                     <h2>28 de Setembro de 2024</h2>
                      <!-- divider -->
                      <div class="hr"></div>
                   </div>
                   <!--/section heading -->
-                  <h5 class="margin1">O encontro de dois sorrisos deu origem a um amor que nos conduzirá a uma aventura inesquecível para sempre.</h5>
-                  <p>
-                     Please RSVP before 28th August 2024
-                  </p>
+                  <h5 class="margin1">Vamos casar e já falta tão pouco!</h5>
                   <div class="margin1">
                      <!-- countdown tag -->
                      <span id="countdown"></span>
@@ -157,7 +149,7 @@
                   </div>
                   <!-- /margin1-->
                   <div class="page-scroll">
-                     <a href="#rsvp" class="btn">RSVP now</a>
+                     <a href="#rsvp" class="btn">Confirmar</a>
                   </div>
                   <p class="food-restriction">
                      Caso tenham alguma restrição alimentar, pedimos que nos informem.
@@ -174,51 +166,34 @@
       <!-- section:about-->
       <section id="about" class="watercolor">
          <!-- container -->
-         <div class="container">
+         <div class="container container-queridos-convidados">
             <div class="section-heading">
-               <h2>About The Couple</h2>
+               <h2>Queridos Convidados</h2>
                <!-- divider -->
                <div class="hr"></div>
             </div>
             <!-- /section-heading-->
-            <!-- Bride Info -->
-            <div class="col-md-5 col-md-offset-1">
-               <img src="{% static 'img/bride.jpg' %}" alt="" class="main-img img-responsive img-circle"/>
-               <h4 class="text-ornament">Maria</h4>
-               <h6 class="main-subheader">A Free-Spirited Woman</h6>
-               <p>
-                  Imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit liquam erat volut pat phas ellus ac sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id iprum omnis.
-                  Lorem ipsum dolor  Phas ellus ac sodales felis tiam.
-               </p>
-               <!-- small social-icons -->	
-               <div class="social-media smaller">
-                  <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                  <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                  <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                  <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                  <a href="#" title=""><i class="fa fa-instagram"></i></a>
+            <div class="flexbox queridos-convidados-body">
+               <!-- Bride Info -->
+               <div class="couple-person">
+                  <div class="img-container">
+                     <img src="{% static 'img/Lado esquerdo.jpeg'%}" alt="" class="main-img img-responsive img-circle"/>
+                  </div>
+                  <h4 class="text-ornament">Sofia</h4>
                </div>
-               <!-- /social-icons -->
-            </div>
-            <!-- /col-md-5 -->
-            <!-- Groom Info -->
-            <div class="col-md-5 res-margin">
-               <img src="{% static 'img/groom.jpg'%}" alt="" class="main-img img-responsive img-circle"/>
-               <h4 class="text-ornament">Jonas</h4>
-               <h6 class="main-subheader">Hopeless Romantic</h6>
-               <p>
-                  Imperdiet interdum donec eget metus auguen unc vel lorem ispuet Ibu lum orci eget, viverra elit liquam erat volut pat phas ellus ac sodales Lorem ipsum dolor sit amet, consectetur adipisicing elit uasi quidem minus id iprum omnis.
-                  Lorem ipsum dolor  Phas ellus ac sodales felis tiam.
-               </p>
-               <!-- small social-icons -->	
-               <div class="social-media smaller">
-                  <a href="#" title=""><i class="fa fa-twitter"></i></a>
-                  <a href="#" title=""><i class="fa fa-facebook"></i></a>
-                  <a href="#" title=""><i class="fa fa-linkedin"></i></a>
-                  <a href="#" title=""><i class="fa fa-pinterest"></i></a>
-                  <a href="#" title=""><i class="fa fa-instagram"></i></a>
+               <!-- /col-md-5 -->
+               <!-- Invite Info -->
+               <div class="invite-text">
+                  Meus queridos, está quase, quase a chegar o grande dia!<br><br>
+                  Este vai ser um dia muito especial! Se estão a ver isto é porque cada um de vocês tem um papel importante nas nossas vidas.<br><br>Juntos vamos dar ínicio a um novo capítulo da nossa história, repleta de amor e alegria. <br><br>Vai ser um dia inesquecível e esperamos contar com a presença de todos!
                </div>
-               <!-- /social-icons -->
+               <!-- Groom Info -->
+               <div class="couple-person">
+                  <div class="img-container">
+                     <img src="{% static 'img/Lado direito.jpg'%}" alt="" class="main-img img-responsive img-circle"/>
+                  </div>
+                  <h4 class="text-ornament">Tomás</h4>
+               </div>
             </div>
             <!-- /col-md-5 -->
          </div>
@@ -236,7 +211,7 @@
       <section id="story">
          <div class="container">
             <div class="section-heading">
-               <h2>Our Story</h2>
+               <h2>A Nossa História</h2>
                <!-- divider -->
                <div class="hr"></div>
             </div>
@@ -249,45 +224,74 @@
                      data-0="transform:translatey(0%);"
                      data-center="transform:translatey(0%);transform:rotate(-4deg)" >
                      <a href="img/polaroid1.jpg" data-gal="prettyPhoto[gallery]">
-                        <img alt="" src="{% static 'img/polaroid1.jpg' %}" class="img-responsive"/>
-                        <span>2010</span>
-                        <p>Our first trip together after dating for 3 Months</p>
+                        <img alt="" src="{% static 'img/2016.jpg' %}" class="img-responsive"/>
+                        <span>2016</span>
+                        <p>O Início da construção de uma relação</p>
                      </a>
                   </li>
                   <!-- image2 -->
                   <li class="polaroid-item" data-0="transform:translatey(-0%);"
                      data-center="transform:translatey(0%);transform:rotate(8deg)">
                      <a href="img/polaroid2.jpg" data-gal="prettyPhoto[gallery]">
-                        <img alt="" src="{% static 'img/polaroid2.jpg' %}" class="img-responsive"/>
-                        <span>2012</span>
-                        <p>Moving Together...</p>
+                        <img alt="" src="{% static 'img/2017.jpg' %}" class="img-responsive"/>
+                        <span>2017</span>
+                        <p>A primeira passagem de ano juntos</p>
                      </a>
                   </li>
                   <!-- image3 -->
                   <li class="polaroid-item" data-0="transform:translatey(0%);rotate:0;"
                      data-center="transform:translatey(0%); transform:rotate(-2deg)" >
                      <a href="img/polaroid3.jpg" data-gal="prettyPhoto[gallery]">
-                        <img alt="" src="{% static 'img/polaroid3.jpg' %}" class="img-responsive"/>
-                        <span>2014</span>
-                        <p>We even got a dog!</p>
+                        <img alt="" src="{% static 'img/2018.jpg' %}" class="img-responsive"/>
+                        <span>2018</span>
+                        <p>Deixar Braga e vir para o Porto</p>
                      </a>
                   </li>
                   <!-- image4 -->
                   <li class="polaroid-item" data-0="transform:translatey(0%);"
                      data-center="transform:translatey(0%);transform:rotate(-12deg)">
                      <a href="img/polaroid4.jpg" data-gal="prettyPhoto[gallery]">
-                        <img alt="" src="{% static 'img/polaroid4.jpg' %}" class="img-responsive"/>
-                        <span>2016</span>
-                        <p>Valentines Day Surprise</p>
+                        <img alt="" src="{% static 'img/2019.jpg' %}" class="img-responsive"/>
+                        <span>2019</span>
+                        <p>A primeira grande viagem fora de Portugal</p>
+                        <p>Viena</p>
                      </a>
                   </li>
                   <!-- image5 -->
                   <li class="polaroid-item" data-0="transform:translatey(0%);"
                      data-center="transform:translatey(0%);transform:rotate(-12deg)">
                      <a href="img/polaroid5.jpg" data-gal="prettyPhoto[gallery]">
-                        <img alt="" src="{% static 'img/polaroid5.jpg' %}" class="img-responsive"/>
-                        <span>2017</span>
-                        <p>The Proposal</p>
+                        <img alt="" src="{% static 'img/2020.jpeg' %}" class="img-responsive"/>
+                        <span>2020</span>
+                        <p>Viver juntos e 24h sobre 24h, o verdadeiro teste à nossa relação</p>
+                        <p>E tivemos a nossa querida Zuzu</p>
+                     </a>
+                  </li>
+                  <!-- image5 -->
+                  <li class="polaroid-item" data-0="transform:translatey(0%);"
+                     data-center="transform:translatey(0%);transform:rotate(-12deg)">
+                     <a href="img/polaroid5.jpg" data-gal="prettyPhoto[gallery]">
+                        <img alt="" src="{% static 'img/2021.jpeg' %}" class="img-responsive"/>
+                        <span>2021</span>
+                        <p>Uma grande conquista de comprar casa</p>
+                     </a>
+                  </li>
+                  <!-- image5 -->
+                  <li class="polaroid-item" data-0="transform:translatey(0%);"
+                     data-center="transform:translatey(0%);transform:rotate(-12deg)">
+                     <a href="img/polaroid5.jpg" data-gal="prettyPhoto[gallery]">
+                        <img alt="" src="{% static 'img/2022.jpeg' %}" class="img-responsive"/>
+                        <span>2022</span>
+                        <p>Madeira uma viagem bonita com grandes amigos</p>
+                     </a>
+                  </li>
+                  <!-- image5 -->
+                  <li class="polaroid-item" data-0="transform:translatey(0%);"
+                     data-center="transform:translatey(0%);transform:rotate(-12deg)">
+                     <a href="img/polaroid5.jpg" data-gal="prettyPhoto[gallery]">
+                        <img alt="" src="{% static 'img/2023.jpeg' %}" class="img-responsive"/>
+                        <span>2023</span>
+                        <p>O primeiro grande SIM (o pedido de casamento)</p>
                      </a>
                   </li>
                   <!-- /li polaroid --> 
@@ -823,27 +827,6 @@
          <!-- /container -->
       </section>
       <!-- /Section ends -->
-      <!-- Footer -->		
-      <footer>
-         <div class="container">
-            <div class="col-md-12 text-center">
-               <!-- Footer logo -->
-               <img src="{% static 'img/logo.png' %}" alt="" class="center-block img-responsive">
-            </div>
-            <!-- /col-md-12 -->        
-            <!-- Credits-->
-            <div class="credits col-md-12 text-center">
-               Copyright © 2022 - Designed by <a href="http://www.ingridkuhn.com">Ingrid Kuhn</a>
-               <!-- Go To Top Link -->
-               <div class="page-scroll hidden-sm hidden-xs">
-                  <a href="#page-top" class="back-to-top"><i class="fa fa-angle-up"></i></a>
-               </div>
-            </div>
-            <!-- /credits -->
-         </div>
-         <!-- /.container -->
-      </footer>
-      <!-- /footer ends -->
       <!-- Core JavaScript Files -->
       <script src="{% static 'js/jquery.min'%}.js"></script>
       <script src="{% static 'js/bootstrap.min'%}.js"></script>
