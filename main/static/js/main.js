@@ -12,11 +12,11 @@ $(document).ready(function() {
   
     $(function(){
 			$('#countdown').countdowntimer({
-			dateAndTime : "2024/06/19 19:00:00",  // <-- edit yyyy / mm / dd / time
+			dateAndTime : "2024/09/28 12:00:00",  // <-- edit yyyy / mm / dd / time
 			size : "lg",
 			// if the date has over 4 digits in days then add an extra [0-9] in the first field bellow
 			regexpMatchFormat: "([0-9][0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
-			regexpReplaceWith:  " <div class='count'> $1<div class='displayformat'>Days</div></div> <div class='count'> $2<div class='displayformat'>Hours</div></div> <div class='count'> $3<div class='displayformat'>Minutes</div></div> <div class='count'> $4<div class='displayformat'>Seconds</div></div>"
+			regexpReplaceWith:  " <div class='count'> $1<div class='displayformat'>Dias</div></div> <div class='count'> $2<div class='displayformat'>Horas</div></div> <div class='count'> $3<div class='displayformat'>Minutos</div></div> <div class='count'> $4<div class='displayformat'>Segundos</div></div>"
 			});
 	});
 	
