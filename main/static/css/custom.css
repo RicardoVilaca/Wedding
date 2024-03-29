@@ -24,12 +24,13 @@ nav.navbar.shrink {
 
 /* Letras na pagina */
 h1, h2, h5, 
-.owl-next i, .owl-prev i {
+.owl-next i, .owl-prev i,
+a:hover {
     color: #376878;
 }
 
 /* Corações */
-.hr {
+.hr, i, a {
     color: #7fbba3;
 }
 
@@ -109,5 +110,11 @@ h1, h2, h5,
 @media (max-width: 1100px) {
     .queridos-convidados-body {
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 350px) {
+    .invite-text {
+        min-width: auto;
     }
 }
