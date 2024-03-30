@@ -214,3 +214,32 @@ h4.date {
     background-attachment: fixed;
     background-position: center;
 }
+
+#quote blockquote {
+    margin-bottom: 30px;
+}
+
+#quote blockquote:before {
+    color: #91c0c7;
+}
+
+#quote blockquote h2 {
+    margin-bottom: 7px;
+    font-family: 'Lora', serif;
+}
+
+/* Contactos */
+
+#contactos .container {
+    max-width: 500px;
+}
+
+#contactos .flexbox {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contactos .flexbox > p {
+    width: 100%;
+}
