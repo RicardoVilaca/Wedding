@@ -25,7 +25,8 @@ nav.navbar.shrink {
 /* Letras na pagina */
 h1, h2, h3, h4, h5, h6, 
 .owl-next i, .owl-prev i,
-a:hover {
+a:hover,
+.side-label {
     color: #376878;
 }
 
@@ -89,7 +90,7 @@ h4 {
 }
 
 /* Imagens em roda */
-.img-container {
+#about .img-container {
     height: 267px;
     width: 267px;
     display: flex;
@@ -100,7 +101,7 @@ h4 {
     border-radius: 50%;
 }
 
-.img-container > img {
+#about .img-container > img {
     height: 100%;
     max-width: none;
     margin: 0 auto;
@@ -149,4 +150,67 @@ h4 {
 
 h4.date {
     margin-bottom: 10px;
+}
+
+/* RSVP */
+
+#rsvp .img-container {
+    width: 430px;
+    height: 552px;
+    transform: rotate(-4deg);
+    margin-top: 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .25);
+    border: 8px solid #fff;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rsvp .img-container > img {
+    transform: none;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    max-width: none;
+    height: 100%;
+    width: auto;
+}
+
+.side-label {
+    font-family: "Lora", serif;
+}
+
+.btn {
+    background-image: url('../img/ornaments/serenity/btn.png');
+    background-color: #91c0c7;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: 'Lora', sans-serif;
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+    border-radius: 0px;
+    margin-top: 30px;
+    padding: 15px 25px;
+    display: inline-block;
+}
+
+.btn:hover {
+    outline: 2px solid #91c0c7;
+    color: #333;
+    border: 0;
+    outline-offset: -3px;
+    box-shadow: none;
+    text-decoration: none;
+}
+
+/* Quote */
+
+#quote {
+    background: linear-gradient(rgba(0,0,0, 0.0) 0%,rgba(0,0,0, 1) 100%), url('../img/quote-bg.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }

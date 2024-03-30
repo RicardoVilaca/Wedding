@@ -613,7 +613,9 @@
       <section id="quote" class="container-fluid">
          <div class="col-md-7 col-centered" data-center-top="opacity: 1" data-center-bottom="opacity: 0">
             <blockquote>
-               <h2>Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.</h2>
+               <h2>O Universo ainda não tem o que nos falta para sermos eternos</h2>
+               <h2>Guarda-me esta noite</h2>
+               <h2>Escreve a nossa história</h2>
             </blockquote>
          </div>
          <!-- /col-md-7-->
@@ -783,15 +785,24 @@
             <!-- /section-heading -->
             <div class="col-lg-5">
                <!-- image -->
-               <img src="{% static 'img/rsvp.jpg' %}" alt="" class="margin1 img-photo rotate2 img-responsive">
+               <div class="img-container">
+                  <img src="{% static 'img/rsvp-img.jpeg' %}" alt="" class="margin1 img-photo rotate2 img-responsive">
+               </div>
             </div>
             <!-- well -->
             <div class="col-lg-7 well">
                <div id="rsvp_form">
                   <div class="form-group text-center">
                      <!-- name field-->
-                     <h5>Full Name<span class="required">*</span></h5>
+                     <h5>Nome Completo<span class="required">*</span></h5>
                      <input type="text" name="name" class="form-control input-field" required="">  
+                     <h5>Restrições alimentares<span class="required">*</span></h5>
+                     <h5>Se sim, indica quais</h5>
+                     <input type="text" name="name" class="form-control input-field" required="">
+                     <h5>Levas Acompanhante? Se sim, indica o nome<span class="required">*</span></h5>
+                     <input type="text" name="name" class="form-control input-field" required="">
+                     <h5>Crianças?<span class="required">*</span></h5>
+                     <input type="text" name="name" class="form-control input-field" required="">
                      <!-- checkbox attending-->
                      <input id="yes" type="radio" value="Accepts with pleasure" name="attending"  />
                      <label for="yes" class="side-label">Accepts with pleasure</label>
