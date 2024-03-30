@@ -23,10 +23,23 @@ nav.navbar.shrink {
 }
 
 /* Letras na pagina */
-h1, h2, h5, 
+h1, h2, h3, h5, 
 .owl-next i, .owl-prev i,
 a:hover {
     color: #376878;
+}
+
+/* Fonte de titulos */
+h1, h2 {
+    font-family: "Great Vibes", cursive;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 1px;
+    line-height: 55px;
+    margin-bottom: 40px;
 }
 
 /* Corações */
