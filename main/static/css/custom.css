@@ -244,3 +244,39 @@ h4.date {
 #contactos .flexbox > p {
     width: 100%;
 }
+
+/* Alojamento */
+
+.housing-container {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.housing {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(55, 104, 120);
+    font-weight: 800;
+    margin: 33px 0;
+    display: block;
+    width: fit-content;
+}
+
+.housing-address, .housing-distance {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.housing-name {
+    padding-bottom: 8px;
+}
+
+.housing-map-container {
+    width: 100%;
+}
+
+.map-canvas {
+    width: 100%;
+    margin-top: 30px;
+    min-height: 205px;
+}
