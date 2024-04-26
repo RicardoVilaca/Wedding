@@ -82,6 +82,7 @@ h4 {
 /* Background verde no ornamento */
 .text-ornament {
     background-image: url(../img/ornaments/serenity/bgname.png);
+    margin-top: 10px;
 }
 
 /* Circulos á volta das imagens */
@@ -130,7 +131,7 @@ h4 {
 .invite-text {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    text-align: justify;
+    text-align: center;
     min-width: 350px;
 }
 
