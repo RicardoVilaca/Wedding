@@ -1,2 +1,3 @@
 - Remove script to hard refresh
 - Font is not the same on Tele / PC
+- Mudar OpenStreetMap para GoogleMaps
