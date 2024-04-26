@@ -34,6 +34,27 @@
       <link rel="shortcut icon" href="{% static 'icons/favicon.ico' %}" type="image/x-icon">
       <!-- Custom -->
       <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+      <!-- Script to hard-refresh -->
+      <script>
+         // Script to hard-refresh the page incase it's using old cached data
+         setTimeout(function () {
+            // Match last version time with last cache time   
+            var lastVersioning = Date.UTC(2024, 04, 01, 00, 00, 00);
+            var lastCacheDateTime = localStorage.getItem('lastCacheDatetime'+document.location.pathname);
+             
+            localStorage.setItem('lastCacheDatetime'+document.location.pathname, Date.now())
+
+            if (lastCacheDateTime) {
+               if (lastVersioning > lastCacheDateTime) {
+                     localStorage.setItem('lastCacheDatetime'+document.location.pathname, lastVersioning)
+                     location.reload(true)
+               }
+            } else {
+                 location.reload(true)
+            }
+         }, 500)
+     </script>
    </head>
    <body id="page-top" data-spy="scroll" data-target=".navbar-custom">    
       <!-- Preloader -->
