@@ -280,3 +280,18 @@ h4.date {
     margin-top: 30px;
     min-height: 205px;
 }
+
+.housing-image {
+    width: 375px;
+    height: 280px;
+    margin-right: 40px;
+}
+
+.housing-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.housing-info {
+    padding-top: 20px;
+}
