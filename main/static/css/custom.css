@@ -2,6 +2,10 @@
     display: flex;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 body {
     background-color: #e6fcf6;
 }
@@ -153,6 +157,10 @@ h4.date {
     margin-bottom: 10px;
 }
 
+.width-full {
+    width: 100%;
+}
+
 /* RSVP */
 
 #rsvp .img-container {
@@ -176,6 +184,18 @@ h4.date {
     max-width: none;
     height: 100%;
     width: auto;
+}
+
+@media (max-width: 1200px) {
+    #rsvp .img-container {
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 535px) {
+    #rsvp .img-container {
+        width: 100%;
+    }
 }
 
 .side-label {
@@ -249,7 +269,7 @@ h4.date {
 
 .housing-container {
     margin: 0 auto;
-    width: fit-content;
+    width: 100%;
 }
 
 .housing {
@@ -259,7 +279,10 @@ h4.date {
     font-weight: 800;
     margin: 33px 0;
     display: block;
-    width: fit-content;
+}
+
+.housing .flexbox {
+    justify-content: center;
 }
 
 .housing-address, .housing-distance {
@@ -294,4 +317,9 @@ h4.date {
 
 .housing-info {
     padding-top: 20px;
+}
+
+.housing-intro, .housing-info {
+    flex-basis: 50%;
+    max-width: 400px;
 }
