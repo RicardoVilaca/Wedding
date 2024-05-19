@@ -266,60 +266,94 @@ h4.date {
 }
 
 /* Alojamento */
-
 .housing-container {
-    margin: 0 auto;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.housing {
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(55, 104, 120);
-    font-weight: 800;
-    margin: 33px 0;
+.alojamento {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagem-container {
+    position: relative;
+    width: 375px; /* Definimos a largura fixa */
+    height: 280px; /* Definimos a altura fixa */
+    margin: auto; /* Centralizamos a imagem */
+}
+
+.imagem-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço, cortando ou esticando conforme necessário */
     display: block;
 }
 
-.housing .flexbox {
-    justify-content: center;
+.nome {
+    position: absolute;
+    top: 10px; /* Posiciona o nome no canto superior */
+    left: 10px; /* Posiciona o nome no canto esquerdo */
+    color: rgb(127, 187, 163); /* Cor do nome */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    font-size: 1.2em;
+    text-align: center;
 }
 
-.housing-address, .housing-distance {
-    font-weight: 400;
-    font-size: 14px;
+.nome a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.housing-name {
-    padding-bottom: 8px;
+.detalhes {
+    flex: 1;
 }
 
-.housing-map-container {
+.morada, .distance {
+    margin-bottom: 10px;
+}
+
+.mapa iframe {
     width: 100%;
+    height: 200px;
+    border: none;
 }
 
-.map-canvas {
-    width: 100%;
-    margin-top: 30px;
-    min-height: 205px;
+@media (min-width: 768px) {
+    .alojamento {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .imagem-container {
+        margin-right: 50px; /* Aumentamos a margem lateral direita da imagem */
+        margin-bottom: 0;
+    }
+
+    .detalhes {
+        flex: 1;
+    }
+
+    .nome {
+        position: static;
+        transform: none;
+        background: none;
+        padding: 0;
+        margin-bottom: 10px;
+        text-align: center;
+        color: rgb(127, 187, 163); 
+    }
+
+    .morada, .distance {
+        margin-bottom: 20px; /* Aumentamos a margem entre a morada e o mapa */
+    }
 }
 
-.housing-image {
-    width: 375px;
-    height: 280px;
-    margin-right: 40px;
-}
-
-.housing-image img {
-    width: 100%;
-    height: 100%;
-}
-
-.housing-info {
-    padding-top: 20px;
-}
-
-.housing-intro, .housing-info {
-    flex-basis: 50%;
-    max-width: 400px;
+@media (max-width: 440px) {
+    .imagem-container {
+        width: 100%;
+    }
 }
