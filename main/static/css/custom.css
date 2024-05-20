@@ -301,10 +301,12 @@ h4.date {
     padding: 5px 10px;
     font-size: 1.2em;
     text-align: center;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
 }
 
 .nome a {
-    color: inherit;
     text-decoration: none;
 }
 
@@ -343,8 +345,8 @@ h4.date {
         background: none;
         padding: 0;
         margin-bottom: 10px;
-        text-align: center;
-        color: rgb(127, 187, 163); 
+        text-align: left; 
+        color: rgb(55, 104, 120);
     }
 
     .morada, .distance {
