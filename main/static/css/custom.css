@@ -60,6 +60,18 @@ h4 {
     margin-top: 0;
 }
 
+h5.subtitle {
+    margin-top: 60px;
+    font-size: 28px;
+}
+
+@media (max-width: 600px) {
+    h5.subtitle {
+        margin-top: 35px;
+        font-size: 13px;
+    }
+}
+
 /* Corações */
 .hr, i, a {
     color: #7fbba3;
@@ -81,12 +93,6 @@ h4 {
 .nav.nav-tabs > li > a:hover {
     background-color: #376878;
     cursor: pointer;
-}
-
-/* Background verde no ornamento */
-.text-ornament {
-    background-image: url(../img/ornaments/serenity/bgname.png);
-    margin-top: 10px;
 }
 
 /* Circulos á volta das imagens */
@@ -134,9 +140,10 @@ h4 {
 
 .invite-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 23px;
     text-align: center;
     min-width: 350px;
+    padding: 0px 200px;
 }
 
 @media (max-width: 1100px) {
@@ -357,5 +364,93 @@ h4.date {
 @media (max-width: 440px) {
     .imagem-container {
         width: 100%;
+    }
+}
+
+/*  */
+
+.text-ornament.subtitle {
+    background-size: 1300px;
+    font-size: 20px;
+    margin-top: 50px;
+    background-image: url(../img/ornaments/serenity/bgname.png);
+}
+
+.celebrate h4 {
+    text-align: center;
+    margin: 0;
+}
+
+.card-letter {
+    font-size: 26px;
+    white-space: nowrap;
+    margin: 47px 0;
+}
+
+.card-title {
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+
+.grooms-name {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    line-height: 1.1;
+    font-size: 30px;
+    letter-spacing: 1.2px;
+    margin: 30px 0px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 800;
+    padding: 15px;
+    color: #fff;
+    text-shadow: 0px 1px 9px rgba(102, 98, 98, 0.36);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../img/ornaments/serenity/bgname.png);
+}
+
+@media (max-width: 600px) {
+    .text-ornament.subtitle {
+        background-image: url(../img/ornaments/serenity/bgname.png);
+        margin-top: 10px;
+        font-size: 13px;
+    }
+
+    .grooms-name {
+        font-size: 22px;
+        padding: 9px;
+        margin: 8px 8px;
+    }
+
+    .queridos-convidados-body {
+        flex-wrap: nowrap;
+    }
+
+    .couple-person {
+        flex-basis: 50%;
+    }
+
+    #about .img-container {
+        height: 125px;
+        width: 125px;
+    }
+
+    .invite-text {
+        margin: 0;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .cerimony-text {
+        background: #f2f7ff;
+        padding: 20px;
+        color: #376878;
     }
 }
