@@ -868,44 +868,6 @@ ul.polaroids li {
 }
 /* =========================== RSVP ============================ */
 
-input[type="checkbox"],
-input[type="radio"] {
-	    display: none;
-}
-.side-label {
-    display: inline-block;
-    position: relative;
-    padding-left: 30px;
-    cursor: pointer;
-	margin: 10px;
-    font-style: italic;
-	line-height: 20px;
-	font-size:18px;
-}
-.side-label::before,
-.side-label::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-.side-label::before {
-	display: block;
-	width: 20px;
-	height: 20px;
-	border: 2px solid #808080;
-}
-input:focus + .side-label::before {
-	border-color: #808080;
-}
-.side-label:after {
-	display: none;
-	width: 20px;
-	height: 20px;
-}
-input:checked + .side-label:after {
-	display: block;
-}
 .message-comments {
 	transition: all 1s ease-out;
 	opacity: 0;

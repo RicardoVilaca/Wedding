@@ -794,6 +794,11 @@ iframe {
 
 /* Ajustes de layout responsivo */
 @media (max-width: 767px) {
+    .row {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .row.d-flex {
         display: flex !important;
         flex-direction: column-reverse !important;
@@ -825,4 +830,185 @@ iframe {
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
+}
+
+/* Floating label styles */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.input-field {
+    font-size: 1em;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+    background: transparent;
+}
+
+.input-field:focus {
+    outline: none;
+}
+
+label {
+    color: #999;
+    font-size: 1em;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+
+.input-field:focus ~ label,
+.input-field:not(:placeholder-shown) ~ label {
+    top: -20px;
+    font-size: 0.8em;
+    color: #5264AE;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+}   
+
+.bar:before {
+    left: 50%;
+}
+
+.bar:after {
+    right: 50%;
+}
+
+.input-field:focus ~ .bar:before, .input-field:focus ~ .bar:after {
+    width: 50%;
+}
+
+.radio-group {
+    margin-bottom: 1.5em;
+}
+
+.radio-group h5 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+.radio-group .side-label {
+    margin-right: 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/*  */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group .radio-label, .form-group .checkbox-label {
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.food-restriction-details,
+.guest-name,
+.guest-food-restriction,
+.guest-food-restriction-details,
+.kids-ages {
+    display: none;
+}
+
+/* Additional styles for responsive design if needed */
+@media (max-width: 600px) {
+    .form-group .radio-label, .form-group .checkbox-label {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+.relative-label {
+    position: relative;
+}
+
+/* Ensure radio and checkbox inputs are visible */
+input[type="radio"], input[type="checkbox"] {
+    display: none; /* Hide the actual radio buttons */
+}
+
+label.radio-label, label.checkbox-label {
+    position: relative;
+    padding-left: 30px; /* Adjust padding to leave space for custom element */
+    cursor: pointer; /* Show pointer cursor */
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+    font-weight: normal;
+    color: #555;
+}
+
+label.radio-label input[type="radio"] + span, label.checkbox-label input[type="checkbox"] + span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #7fbba3;
+    border-radius: 4px; /* Slight rounding on the corners */
+    background-color: transparent;
+    cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+label.radio-label input[type="radio"]:checked + span, label.checkbox-label input[type="checkbox"]:checked + span {
+    background-color: #7fbba3; /* Green color when checked */
+    border-color: #7fbba3; /* Ensure border color matches when checked */
+}
+
+/* Custom span for styling */
+label.radio-label span, label.checkbox-label span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    pointer-events: auto;
+}
+
+/* Custom styles for checkboxes to be side by side on mobile */
+@media (max-width: 600px) {
+    .form-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .form-group .relative-label {
+        width: 100%;
+    }
+
+    .form-group label.radio-label,
+    .form-group label.checkbox-label {
+        margin-bottom: 0; /* Remove bottom margin for better alignment */
+    }
 }

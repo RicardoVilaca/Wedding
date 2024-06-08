@@ -1,13 +1,26 @@
-const displayAgeContainer = () => {
-	const value = document.querySelector('#radio-criancas-false').checked == false
-	const ageContainer = document.querySelector('#age-container')
-	const ageContainerInputs = document.querySelectorAll('#age-container input')
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('input[name="food_restriction"]').forEach(function(elem) {
+        elem.addEventListener('change', function() {
+            document.querySelector('.food-restriction-details').style.display = this.value === 'yes' ? 'block' : 'none';
+        });
+    });
 
-	ageContainer.style.display = value ? 'block' : 'none'
+    document.querySelectorAll('input[name="bringing_guest"]').forEach(function(elem) {
+        elem.addEventListener('change', function() {
+            document.querySelector('.guest-name').style.display = this.value === 'yes' ? 'block' : 'none';
+            document.querySelector('.guest-food-restriction').style.display = this.value === 'yes' ? 'block' : 'none';
+        });
+    });
 
-	if (!value) {
-		ageContainerInputs.forEach(e => {
-			e.checked = false
-		})
-	}
-}
+    document.querySelectorAll('input[name="guest_food_restriction"]').forEach(function(elem) {
+        elem.addEventListener('change', function() {
+            document.querySelector('.guest-food-restriction-details').style.display = this.value === 'yes' ? 'block' : 'none';
+        });
+    });
+
+    document.querySelectorAll('input[name="bringing_kids"]').forEach(function(elem) {
+        elem.addEventListener('change', function() {
+            document.querySelector('.kids-ages').style.display = this.value === 'yes' ? 'block' : 'none';
+        });
+    });
+});

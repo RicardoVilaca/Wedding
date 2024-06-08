@@ -359,91 +359,114 @@
 </section>
 
 
-
-      <section id="rsvp">
-         <!-- parallax ornament -->
-         <div class="ornament7 hidden-sm hidden-xs hidden-md" data-0="opacity:1;"
-            data-100="transform:translatex(0%);"
-            data-center-center="transform:translatex(90%);">
-            <!-- illustration path in the color template CSS -->
+<section id="rsvp">
+   <div class="container">
+      <div class="section-heading">
+         <h2>Confirmar Presença</h2>
+         <div class="hr"></div>
+      </div>
+      <div class="col-lg-5">
+         <div class="img-container width-full">
+            <img src="{% static 'img/wedding2.jpeg' %}" alt="" class="margin1 img-photo rotate2 img-responsive">
          </div>
-         <div class="container">
-            <div class="section-heading">
-               <h2>Confirmar Presença</h2>
-               <!-- divider -->
-               <div class="hr"></div>
+      </div>
+      <div class="col-lg-7 well">
+         <div id="rsvp_form">
+            <div class="form-group">
+               <input type="text" name="name" class="input-field" required placeholder=" ">
+               <label for="name">Nome Completo</label>
+               <div class="bar"></div>
             </div>
-            <!-- /section-heading -->
-            <div class="col-lg-5">
-               <!-- image -->
-               <div class="img-container width-full">
-                  <img src="{% static 'img/wedding2.jpeg' %}" alt="" class="margin1 img-photo rotate2 img-responsive">
-               </div>
+            <div class="form-group">
+               <input type="text" name="cellphone" class="input-field" required placeholder=" ">
+               <label for="cellphone">Telemóvel</label>
+               <div class="bar"></div>
             </div>
-            <!-- well -->
-            <div class="col-lg-7 well">
-               <div id="rsvp_form">
-                  <div class="form-group text-center">
-                     <!-- name field-->
-                     <h5>Nome Completo<span class="required">*</span></h5>
-                     <input type="text" name="name" class="form-control input-field" required="">  
-                     <h5>Telemóvel<span class="required">*</span></h5>
-                     <input type="text" name="cellphone" class="form-control input-field" required="">  
-                     <h5>Restrições alimentares<span class="required">*</span></h5>
-                     <input id="radio-restricoes-yes" type="radio" name="restricoes" value="true">
-                     <label for="radio-restricoes-yes" class="side-label">Sim</label>
-                     <input id="radio-restricoes-false" type="radio" name="restricoes" value="false" checked>
-                     <label for="radio-restricoes-false" class="side-label">Não</label>
-                     <h5>Se sim, indica quais</h5>
-                     <input type="text" name="restricoes-desc" class="form-control input-field">
-                     <h5>Levas Acompanhante?<span class="required">*</span></h5>
-                     <input id="radio-acompanhante-yes" type="radio" name="acompanhante" value="true">
-                     <label for="radio-acompanhante-yes" class="side-label">Sim</label>
-                     <input id="radio-acompanhante-false" type="radio" name="acompanhante" value="false" checked>
-                     <label for="radio-acompanhante-false" class="side-label">Não</label>
-                     <h5>Se sim, indica o nome</h5>
-                     <input type="text" name="acompanhante-nome" class="form-control input-field">
-                     <h5>Restrições alimentares acompanhante<span class="required">*</span></h5>
-                     <input id="radio-restricoes-yes" type="radio" name="restricoes" value="true">
-                     <label for="radio-restricoes-yes" class="side-label">Sim</label>
-                     <input id="radio-restricoes-false" type="radio" name="restricoes" value="false" checked>
-                     <label for="radio-restricoes-false" class="side-label">Não</label>
-                     <h5>Se sim, indica quais</h5>
-                     <input type="text" name="restricoes-desc" class="form-control input-field">
-                     <h5>Crianças?<span class="required">*</span></h5>
-                     <input id="radio-criancas-yes" type="radio" name="criancas" value="true" onclick="displayAgeContainer()">
-                     <label for="radio-criancas-yes" class="side-label">Sim</label>
-                     <input id="radio-criancas-false" type="radio" name="criancas" value="false" checked onclick="displayAgeContainer()">
-                     <label for="radio-criancas-false" class="side-label">Não</label>
-
-                     <div id="age-container" style="display: none;">
-                        <h5>Idades</h5>
-                        <input type="checkbox" name="age0_4" id="age0_4">
-                        <label for="age0_4" class="side-label">0 a 4 anos</label>
-                        <input type="checkbox" name="age5_10" id="age5_10">
-                        <label for="age5_10" class="side-label">5 a 10 anos</label>
-                        <input type="checkbox" name="age10plus" id="age10plus">
-                        <label for="age10plus" class="side-label">Mais de 10 anos</label>
-                     </div>
-
-                     <!--/message-comments -->
-                     <div class="text-center">
-                        <button type="submit" id="submit_rsvp" value="Submit" class="btn">Submit</button>
-                     </div>
-                     <!-- /col-md-12 -->
-                  </div>
-                  <!-- /Form-group -->
-                  <!-- Contact results -->
-                  <div id="contact_results"></div>
-               </div>
-               <!-- /rsvp form-->
+            <!-- New fields -->
+            <div class="form-group">
+               <label class="relative-label">Restrições Alimentares</label><br>
+               <label class="radio-label relative-label">
+                  <input type="radio" id="food_restriction_no" name="food_restriction" value="no">
+                  <span></span>Não
+               </label>
+               <label class="radio-label relative-label">
+                  <input type="radio" id="food_restriction_yes" name="food_restriction" value="yes">
+                  <span></span>Sim
+               </label>
             </div>
-            <!-- /well-->
+            <div class="form-group food-restriction-details" style="display: none;">
+               <input type="text" name="food_restriction_details" class="input-field" placeholder=" ">
+               <label for="food_restriction_details relative-label">Se sim, indica quais</label>
+               <div class="bar"></div>
+            </div>
+            <div class="form-group">
+               <label class="relative-label">Levas Acompanhante?</label><br>
+               <label class="radio-label relative-label">
+                  <input type="radio" id="bringing_guest_no" name="bringing_guest" value="no">
+                  <span></span>Não
+               </label>
+               <label class="radio-label relative-label">
+                  <input type="radio" id="bringing_guest_yes" name="bringing_guest" value="yes">
+                  <span></span>Sim
+               </label>
+            </div>
+            <div class="form-group guest-name" style="display: none;">
+               <input type="text" name="guest_name" class="input-field" placeholder=" ">
+               <label for="guest_name relative-label">Se sim, indica o nome</label>
+               <div class="bar"></div>
+            </div>
+            <div class="form-group guest-food-restriction" style="display: none;">
+               <label class="relative-label">Restrições Alimentares do Acompanhante</label><br>
+               <label class="radio-label relative-label">
+                  <input type="radio" id="guest_food_restriction_no" name="guest_food_restriction" value="no">
+                  <span></span>Não
+               </label>
+               <label class="radio-label relative-label">
+                  <input type="radio" id="guest_food_restriction_yes" name="guest_food_restriction" value="yes">
+                  <span></span>Sim
+               </label>
+            </div>
+            <div class="form-group guest-food-restriction-details" style="display: none;">
+               <input type="text" name="guest_food_restriction_details" class="input-field" placeholder=" ">
+               <label for="guest_food_restriction_details">Indica quais</label>
+               <div class="bar"></div>
+            </div>
+            <div class="form-group">
+               <label class="relative-label">Crianças?</label><br>
+               <label class="radio-label relative-label">
+                  <input type="radio" id="bringing_kids_no" name="bringing_kids" value="no">
+                  <span></span>Não
+               </label>
+               <label class="radio-label relative-label">
+                  <input type="radio" id="bringing_kids_yes" name="bringing_kids" value="yes">
+                  <span></span>Sim
+               </label>
+            </div>
+            <div class="form-group kids-ages" style="display: none;">
+               <label class="relative-label">Idades</label><br>
+               <label class="checkbox-label relative-label">
+                  <input type="checkbox" id="kids_ages_0_4" name="kids_ages" value="0-4">
+                  <span></span>0 a 4 anos
+               </label>
+               <label class="checkbox-label relative-label">
+                  <input type="checkbox" id="kids_ages_5_10" name="kids_ages" value="5-10">
+                  <span></span>5 a 10 anos
+               </label>
+               <label class="checkbox-label relative-label">
+                  <input type="checkbox" id="kids_ages_10_plus" name="kids_ages" value="10+">
+                  <span></span>Mais de 10 anos
+               </label>
+            </div>
+            <!-- End new fields -->
+            <div class="text-center">
+               <button type="submit" id="submit_rsvp" value="Submit" class="btn">Submit</button>
+            </div>
          </div>
-         <!-- /container -->
-      </section>
-      <!-- /Section ends -->
-      <!-- Section: Quote -->
+      </div>
+   </div>
+</section>
+
+
       <section id="quote" class="container-fluid">
          <div class="col-md-7 col-centered" data-center-top="opacity: 1" data-center-bottom="opacity: 0">
             <blockquote>
