@@ -454,3 +454,63 @@ h4.date {
         color: #376878;
     }
 }
+
+/* O Evento */
+
+.celebrate-box {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 20px 0;
+    transform: rotate(-4deg); /* Adiciona rotação */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .25); /* Sombra */
+    border: 8px solid #fff; /* Borda */
+}
+
+.celebrate-box h4 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #376878;
+}
+
+.celebrate-box .event-details {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.celebrate-box .event-details strong {
+    font-weight: 700;
+    color: #376878;
+}
+
+.img-photo {
+    margin-bottom: 20px; /* Garantir espaço suficiente entre a imagem e o mapa */
+}
+
+iframe {
+    margin-top: 20px; /* Garantir espaço suficiente entre a imagem e o mapa */
+}
+
+/* Ajustes de layout responsivo */
+@media (max-width: 767px) {
+    .row.d-flex {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+
+    .celebrate-box {
+        margin: 20px auto;
+    }
+
+    iframe {
+        padding: 0 10px; /* Adiciona padding nas laterais do iframe para dispositivos móveis */
+        box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+    }
+}
+
+/* Adicionar margem superior na seção Copo de Água */
+.mt-5 {
+    margin-top: 5rem !important;
+}
