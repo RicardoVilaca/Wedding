@@ -1,3 +1,177 @@
+/* CUSTOM CSS */
+
+/* Core CSS */
+
+/* Preloader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 99;
+}
+
+#preloader .spinner {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+}
+
+#preloader .bounce1,
+#preloader .bounce2,
+#preloader .bounce3 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+#preloader .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+#preloader .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/* Typography */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #555;
+    background-color: #f8f8f8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: #376878;
+}
+
+/* Headings */
+h1,
+.h1 {
+    font-size: 48px;
+}
+
+h2,
+.h2 {
+    font-size: 36px;
+}
+
+h3,
+.h3 {
+    font-size: 28px;
+}
+
+h4,
+.h4 {
+    font-size: 22px;
+}
+
+h5,
+.h5 {
+    font-size: 18px;
+}
+
+h6,
+.h6 {
+    font-size: 16px;
+}
+
+/* Sections */
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 2.5em;
+}
+
+.section-heading .hr {
+    width: 60px;
+    height: 4px;
+    background-color: #72C1E4;
+    margin: 20px auto;
+}
+
+.section-subheading {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 75px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Buttons */
+.btn {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-radius: 0;
+    padding: 10px 22px;
+}
+
+.btn-primary {
+    background-color: #72C1E4;
+    border-color: #72C1E4;
+    color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background-color: #376878;
+    border-color: #376878;
+    color: #fff;
+}
+
+/* Custom CSS */
+
+/* Flexbox */
 .flexbox {
     display: flex;
 }
@@ -26,7 +200,7 @@ nav.navbar.shrink {
     color: #fff;
 }
 
-/* Letras na pagina */
+/* Letras na página */
 h1, h2, h3, h4, h5, h6, 
 .owl-next i, .owl-prev i,
 a:hover,
@@ -34,7 +208,7 @@ a:hover,
     color: #376878;
 }
 
-/* Fonte de titulos */
+/* Fonte de títulos */
 h1, h2 {
     font-family: "Great Vibes", cursive;
 }
@@ -77,7 +251,7 @@ h5.subtitle {
     color: #7fbba3;
 }
 
-/* Butões inativos */
+/* Botões inativos */
 .nav.nav-tabs > li.active > a {
     background-color: #376878;
     color: #fff;
@@ -95,7 +269,7 @@ h5.subtitle {
     cursor: pointer;
 }
 
-/* Circulos á volta das imagens */
+/* Círculos à volta das imagens */
 .img-circle {
     border-color: #e6fcf6;
 }
@@ -121,7 +295,6 @@ h5.subtitle {
 }
 
 /* Secção do queridos convidados */
-
 .container-queridos-convidados {
     margin: 0;
     width: auto;
@@ -159,7 +332,6 @@ h5.subtitle {
 }
 
 /* O Evento */
-
 h4.date {
     margin-bottom: 10px;
 }
@@ -169,7 +341,6 @@ h4.date {
 }
 
 /* RSVP */
-
 #rsvp .img-container {
     width: 430px;
     height: 552px;
@@ -235,7 +406,6 @@ h4.date {
 }
 
 /* Quote */
-
 #quote {
     background: linear-gradient(rgba(0,0,0, 0.0) 0%,rgba(0,0,0, 1) 100%), url('../img/quote-bg.jpeg');
     background-size: cover;
@@ -257,7 +427,6 @@ h4.date {
 }
 
 /* Contactos */
-
 #contactos .container {
     max-width: 500px;
 }
@@ -456,7 +625,6 @@ h4.date {
 }
 
 /* O Evento */
-
 .celebrate-box {
     background: #fff;
     padding: 20px;
@@ -506,11 +674,155 @@ iframe {
 
     iframe {
         padding: 0 10px; /* Adiciona padding nas laterais do iframe para dispositivos móveis */
-        box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+        box-sizing: border-box;
     }
+
+    .section-heading h2 {
+        font-size: 2em; /* Tamanho da fonte ajustado para a versão mobile */
+    }
+
+    .section-heading .hr {
+        width: 40px;
+        height: 3px;
+    }
+}
+
+/* Estilo para o contêiner com o botão de confirmar presença */
+.confirm-presence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 /* Adicionar margem superior na seção Copo de Água */
 .mt-5 {
     margin-top: 5rem !important;
+}
+
+/* Estilos para evitar overflow lateral */
+body, html {
+    overflow-x: hidden;
+}
+
+.container, .container-fluid, .row {
+    max-width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Ajustes de layout e espaçamento */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#guests .guest {
+    margin-bottom: 20px;
+}
+
+#guests .img-circle {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#guests .lead {
+    margin-top: 20px;
+    padding: 0 15px; /* Adiciona padding nas laterais para dispositivos móveis */
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-right: 0;
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+}
+
+/* Estilos gerais */
+body, html {
+    overflow-x: hidden;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#guests .guest {
+    margin-bottom: 20px;
+}
+
+#guests .img-circle {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+#guests .lead {
+    margin-top: 20px;
+    padding: 0 15px; /* Adiciona padding nas laterais para dispositivos móveis */
+    text-align: center;
+}
+
+/* Ajustes específicos para evitar overflow lateral */
+.img-photo, .celebrate-box {
+    max-width: 100%;
+}
+
+iframe {
+    width: 100%;
+    padding: 0 10px; /* Adiciona padding nas laterais do iframe para dispositivos móveis */
+    box-sizing: border-box; /* Garante que o padding seja incluído na largura total */
+}
+
+.section-heading h2 {
+    font-size: 2.5em; /* Tamanho da fonte ajustado para a versão desktop */
+}
+
+.section-heading .hr {
+    width: 60px;
+    height: 4px;
+    background-color: #72C1E4;
+    margin: 20px auto;
+}
+
+/* Ajustes de layout responsivo */
+@media (max-width: 767px) {
+    .row.d-flex {
+        display: flex !important;
+        flex-direction: column-reverse !important;
+    }
+
+    .celebrate-box {
+        margin: 20px auto;
+    }
+
+    iframe {
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .section-heading h2 {
+        font-size: 2em; /* Tamanho da fonte ajustado para a versão mobile */
+    }
+
+    .section-heading .hr {
+        width: 40px;
+        height: 3px;
+    }
+}
+
+/* Estilo para o contêiner com o botão de confirmar presença */
+.confirm-presence {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
 }
