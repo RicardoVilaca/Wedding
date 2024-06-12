@@ -672,6 +672,7 @@ iframe {
 
     .section-heading h2 {
         font-size: 2em; /* Tamanho da fonte ajustado para a versão mobile */
+        margin-top: 5px;
     }
 
     .section-heading .hr {
