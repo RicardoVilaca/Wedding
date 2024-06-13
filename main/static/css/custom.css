@@ -1002,3 +1002,7 @@ label.radio-label span, label.checkbox-label span {
     border-left: 3px solid #376878;
     margin-top: 10px;
 }
+
+html {
+    scroll-behavior: smooth;
+}

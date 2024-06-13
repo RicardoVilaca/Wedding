@@ -22,13 +22,13 @@ $(document).ready(function() {
 	
     //Smooth Scroll 
 
-    $('.page-scroll a').on('click', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 2500, 'easeInOutExpo');
-        event.preventDefault();
-    });
+    // $('.page-scroll a').on('click', function(event) {
+    //     var $anchor = $(this);
+    //     $('html, body').stop().animate({
+    //         scrollTop: $($anchor.attr('href')).offset().top
+    //     }, 2500, 'easeInOutExpo');
+    //     event.preventDefault();
+    // });
 	
     //	Back Top Link
 
@@ -191,3 +191,25 @@ $(window).load(function() {
 	
 
 }); // end window load
+
+
+// Scroll effect
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to handle smooth scrolling
+    function smoothScroll(target) {
+      var targetPosition = document.querySelector(target).offsetTop;
+      document.querySelector('body').scrollTo({
+        top: targetPosition,
+        behavior: "smooth"
+      });
+    }
+
+    // Add event listeners to all links with hash
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        var hash = this.getAttribute("href");
+        smoothScroll(hash);
+      });
+    });
+});
