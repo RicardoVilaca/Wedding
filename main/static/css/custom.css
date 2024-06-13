@@ -1006,3 +1006,14 @@ label.radio-label span, label.checkbox-label span {
 html {
     scroll-behavior: smooth;
 }
+
+/* Message when the user sends the form with correct info */
+.success-message {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid green;
+    color: green;
+    background-color: #e6ffe6;
+    border-radius: 5px;
+}
