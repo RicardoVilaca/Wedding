@@ -451,7 +451,6 @@ h4.date {
     position: relative;
     width: 375px; /* Definimos a largura fixa */
     height: 280px; /* Definimos a altura fixa */
-    margin: auto; /* Centralizamos a imagem */
 }
 
 .imagem-container img {
