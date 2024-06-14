@@ -1017,3 +1017,10 @@ html {
     background-color: #e6ffe6;
     border-radius: 5px;
 }
+
+/* The answers in the form that are not displayed by default */
+@media (max-width: 600px) {
+    .hidden-form-group {
+        margin-top: 25px;
+    }
+}
