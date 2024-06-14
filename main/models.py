@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Confirmado(models.Model):
+class Resposta(models.Model):
     name = models.CharField(max_length=100)
     cellphone = models.CharField(max_length=20)
     food_restriction = models.CharField(max_length=3, choices=[('yes', 'Sim'), ('no', 'Não')])
