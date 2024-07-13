@@ -14,10 +14,6 @@ from pathlib import Path
 import os
 import django_heroku
 import dj_database_url
-from dotenv import load_dotenv
-import whitenoise.storage
-
-load_dotenv() # Load env variables
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,14 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = "yOwbLWyXow3kJjwS2M6NTaz1qNAwVjhbnDoScS3REgABEXAwiv"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG') == 'True'
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://weddingst-c6ac5e2f00b5.herokuapp.com/', '127.0.0.1', 'sofia-tomas.fly.dev']
-
-CSRF_TRUSTED_ORIGINS = ['https://sofia-tomas.fly.dev']
+ALLOWED_HOSTS = ['https://weddingst-c6ac5e2f00b5.herokuapp.com/', '127.0.0.1']
 
 
 # Application definition
@@ -90,11 +84,16 @@ WSGI_APPLICATION = 'wedding.wsgi.application'
 DATABASES = {}
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
-DATABASES['default'] = dj_database_url.config(
-    default=DATABASE_URL,
-    conn_max_age=600,
-    ssl_require=True
-)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'wedding-pg',
+        'USER': 'postgres',
+        'PASSWORD': 'btqPhkRc8jwRlRq',
+        'HOST': 'wedding-pg.internal',
+        'PORT': '5432'
+    }
+}
 
 
 # Password validation
