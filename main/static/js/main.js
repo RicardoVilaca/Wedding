@@ -96,18 +96,16 @@ $(document).ready(function() {
 
 
 // Window scroll function
-
-$(window).scroll(function() {
-	
-	   // Shrink Navbar on Scroll 	
-
-	  if ($(document).scrollTop() > 50) {
-		$('nav').addClass('shrink');
-	  } else {
-		$('nav').removeClass('shrink');
-	  }
-	  
-});
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('body').addEventListener('scroll', function() {
+        // Shrink Navbar on Scroll
+        if (document.documentElement.scrollTop > 50 || document.body.scrollTop > 50) {
+            document.querySelector('nav.navbar').classList.add('shrink');
+        } else {
+            document.querySelector('nav.navbar').classList.remove('shrink');
+        }
+    })
+})
 
 //On Click  function
 	$(document).on('click',function(){
