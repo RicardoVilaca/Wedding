@@ -96,6 +96,10 @@
           location.reload(true);
         }
       }, 500);
+
+      // Url for the form view
+      const submit_rsvp = "{% url 'submit_rsvp' %}";
+
     </script>
   </head>
 
@@ -556,6 +560,7 @@
           <div id="rsvp_form">
             <form method="post" action="{% url 'home' %}">
               {% csrf_token %}
+
               <div class="form-group">
                 <input
                   type="text"
@@ -751,14 +756,16 @@
                   value="Submit"
                   class="btn"
                 >
-                  Submit
+                  Enviar
                 </button>
               </div>
             </form>
 
-            {% if success_message %}
-            <div class="success-message">{{ success_message }}</div>
-            {% endif %}
+            <div id="form-messages" style="display: none;">
+              <div class="form-alert form-alert-success" id="success-message" style="display: none;"></div>
+              <div class="alert form-alert-danger" id="error-message" style="display: none;"></div>
+            </div>
+
           </div>
         </div>
       </div>

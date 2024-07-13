@@ -1,10 +1,12 @@
 from django.shortcuts import render, HttpResponse
 from .forms import RSVPForm
+from django.http import JsonResponse
 
 # Create your views here.
 def home(request):
-    success_message = None
+    return render(request, 'index.html')
 
+def submit_rsvp(request):
     if request.method == 'POST':
         form = RSVPForm(request.POST)
         if form.is_valid():
@@ -19,8 +21,8 @@ def home(request):
             # Set the success message
             success_message = "Obrigado pela resposta! Estamos ansiosos por celebrar convosco."
 
-            form = RSVPForm()  # Reset the form after successful submission
-    else:
-        form = RSVPForm()
-
-    return render(request, 'index.html', {'form': form, 'success_message': success_message})
+            return JsonResponse({'message': success_message}, status=200)
+        else:
+            errors = form.errors.as_json()
+            return JsonResponse({'errors': errors}, status=400)
+    return JsonResponse({'message': 'Método não permitido.'}, status=405)
