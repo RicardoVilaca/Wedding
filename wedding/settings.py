@@ -81,18 +81,20 @@ WSGI_APPLICATION = 'wedding.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {}
-
-DATABASE_URL = os.environ.get('DATABASE_URL')
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'wedding-pg',
-        'USER': 'postgres',
-        'PASSWORD': 'btqPhkRc8jwRlRq',
-        'HOST': 'wedding-pg.internal',
-        'PORT': '5432'
-    }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
+    },
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'wedding-pg',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'btqPhkRc8jwRlRq',
+    #     'HOST': 'wedding-pg.internal',
+    #     'PORT': '5432'
+    # }
 }
 
 
