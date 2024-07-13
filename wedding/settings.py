@@ -29,10 +29,10 @@ SECRET_KEY = "yOwbLWyXow3kJjwS2M6NTaz1qNAwVjhbnDoScS3REgABEXAwiv"
 DEBUG = False
 
 ALLOWED_HOSTS = ['https://weddingst-c6ac5e2f00b5.herokuapp.com/', '127.0.0.1', '*sofia-tomas.com']
-CSRF_TRUSTED_ORIGINS = ['*sofia-tomas.com']
-CSRF_ALLOWED_ORIGINS = ['*sofia-tomas.com']
-CORS_ORIGINS_WHITELIST = ['*sofia-tomas.com']
-CORS_ALLOWED_ORIGINS = ['*sofia-tomas.com']
+CSRF_TRUSTED_ORIGINS = ['*sofia-tomas.com', 'cellular-mamenchisaurus-6kg2ch2hzitjz270tt22datd.herokudns.com']
+CSRF_ALLOWED_ORIGINS = ['*sofia-tomas.com', 'cellular-mamenchisaurus-6kg2ch2hzitjz270tt22datd.herokudns.com']
+CORS_ORIGINS_WHITELIST = ['*sofia-tomas.com', 'cellular-mamenchisaurus-6kg2ch2hzitjz270tt22datd.herokudns.com']
+CORS_ALLOWED_ORIGINS = ['*sofia-tomas.com', 'cellular-mamenchisaurus-6kg2ch2hzitjz270tt22datd.herokudns.com']
 
 
 # Application definition
