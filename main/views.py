@@ -1,14 +1,11 @@
 from django.shortcuts import render, HttpResponse
 from .forms import RSVPForm
 from django.http import JsonResponse
-from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
-@csrf_exempt
 def home(request):
     return render(request, 'index.html')
 
-@csrf_exempt
 def submit_rsvp(request):
     if request.method == 'POST':
         form = RSVPForm(request.POST)
