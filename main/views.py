@@ -13,10 +13,13 @@ def submit_rsvp(request):
             # Process the data in form.cleaned_data
             # You can save the data to a model or send an email, etc.
             print(request.POST)
-            print(form.cleaned_data)  # For demonstration purposes
                         
             # Save the form data to the model
-            form.save()
+            i = form.save(commit=False)
+
+            # Concat kids ages and save
+            i.kids_ages = form.cleaned_data['kids_ages']
+            i.save()
             
             # Set the success message
             success_message = "Obrigado pela resposta! Estamos ansiosos por celebrar convosco."
