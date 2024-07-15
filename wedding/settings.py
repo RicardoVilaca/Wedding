@@ -30,8 +30,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['https://weddingst-c6ac5e2f00b5.herokuapp.com/', '127.0.0.1', '*sofia-tomas.com']
 CSRF_TRUSTED_ORIGINS = [
-    'https://weddingst-c6ac5e2f00b5.herokuapp.com/',
-    'https://sofia-tomas.com/'
+    'https://weddingst-c6ac5e2f00b5.herokuapp.com',
+    'https://sofia-tomas.com'
 ]
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
