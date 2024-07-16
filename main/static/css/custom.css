@@ -1046,3 +1046,28 @@ html {
     background-color: #f2dede;
     border-color: #ebccd1;
 }
+
+/* Estilos para o número de telefone */
+.telefone {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #376878; /* Cor principal do site */
+}
+
+.phone-number {
+    color: #376878; /* Mesma cor do texto principal */
+    background-color: transparent; /* Remover o fundo */
+    padding: 2px 5px;
+    border-radius: 4px;
+    box-shadow: none; /* Remover a sombra */
+    font-weight: normal; /* Deixar a fonte mais leve */
+}
+
+/* Estilos para o separador entre alojamentos */
+.alojamento-separator {
+    border: 0;
+    height: 1px;
+    background: #ddd; /* Cor neutra que se integra bem com o tema */
+    margin: 20px 0; /* Espaçamento adequado */
+}
