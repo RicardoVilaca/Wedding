@@ -1048,6 +1048,7 @@ html {
 }
 
 /* Estilos para o número de telefone */
+.morada,
 .telefone {
     margin-top: 10px;
     font-size: 16px;
@@ -1055,8 +1056,9 @@ html {
     color: #376878; /* Cor principal do site */
 }
 
-.phone-number {
-    color: #376878; /* Mesma cor do texto principal */
+.morada > span,
+.telefone > span {
+    color: black; 
     background-color: transparent; /* Remover o fundo */
     padding: 2px 5px;
     border-radius: 4px;
